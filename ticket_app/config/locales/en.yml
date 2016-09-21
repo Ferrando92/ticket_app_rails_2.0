@@ -20,4 +20,19 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  #/layout
+    layout_brand_label: 'Ticket Mesitah'
+    layout_new_ticket_label: 'New Ticket'
+    layout_show_tickets_label: 'All Tickets'
+    layout_show_films_label: 'Films'
+    layout_sign_up_label: 'Sign up'
+    layout_login_label: 'Sign in'
+    layout_my_profile_label: 'My profile'
+  #/tickets/show/id
+    show_Film_label: "Film"
+    show_Name_label: 'Name'
+    show_Mail_label: 'Email'
+    show_Session_label: 'Session'
+    show_Price_label: 'Price'
+
+

@@ -1,0 +1,58 @@
+!!!
+%html
+  %head
+    %title Ticket Meistah
+    %link(rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    %script(src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js")
+    %script(src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js")
+
+  %body
+    #wrapper
+    #header
+      %nav{:class => "navbar navbar-inverse "}
+        %div{:class => "container-fluid"}
+          %div{:class => "navbar-header"}
+            %a{:class => "navbar-brand", :href => '/'}
+              = t('layout_brand_label')
+          %ul{:class => "nav navbar-nav"}
+            %li
+              %a{:href => '../tickets/new'} 
+                = t('layout_new_ticket_label')
+            %li
+              %a{:href => "../tickets"} 
+                = t('layout_show_tickets_label')
+            %li
+              %a{:href => '../films'} 
+                = t('layout_show_films_label')
+          %ul{:class => "nav navbar-nav navbar-right"}
+            - unless user_signed_in?
+              %li
+                %a{:href => '../users/sign_up'} 
+                  = t('layout_sign_up_label')
+              %li  
+                %a{:href => '../users/sign_in'}
+                  = t('layout_login_label')
+            - else
+              %li
+                %a{:href => "../users/"} 
+                  = t('layout_my_profile_label')
+              %li
+                %a{:href => "#{destroy_user_session_path}", :method => 'DELETE'} 
+                  = t('layout_my_profile_label')
+          
+    #content
+    %p{:class => "notice"}
+      =notice
+    %p{:class => "alert"}
+      =alert 
+
+    %div{:class => "container center-block" }
+      =yield
+
+  #footer
+    %footer{:class => 'footer'}
+      %div{:class => 'container'}
+        %p{:class => 'text-muted'}
+          Creado por Sergio Ferrando -
+          %a{ :href => "https://github.com/Ferrando92/Cinema_Sinatra_Basic/tree/master/views", :title => "My GitHub repository "}
+            link to my GitHub repository
