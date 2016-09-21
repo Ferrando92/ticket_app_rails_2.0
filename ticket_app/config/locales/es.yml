@@ -5,7 +5,8 @@ es:
     layout_show_tickets_label: 'Ver Tickets'
     layout_show_films_label: 'Peliculas'
     layout_sign_up_label: 'Registrate'
-    layout_login_label: 'Ingresa'
+    layout_sign_in_label: 'Indentificarse'
+    layout_sign_ou_label: 'Cerrar sesion'
     layout_my_profile_label: 'Mi perfil'
   #/tickets/show/id
     show_Film_label: "Pelicula"

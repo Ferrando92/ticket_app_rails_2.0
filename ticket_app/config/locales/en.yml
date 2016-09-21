@@ -26,7 +26,8 @@ en:
     layout_show_tickets_label: 'All Tickets'
     layout_show_films_label: 'Films'
     layout_sign_up_label: 'Sign up'
-    layout_login_label: 'Sign in'
+    layout_sign_in_label: 'Sign in'
+    layout_sign_out_label: 'Sign out'
     layout_my_profile_label: 'My profile'
   #/tickets/show/id
     show_Film_label: "Film"

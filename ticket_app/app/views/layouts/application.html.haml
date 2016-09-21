@@ -31,14 +31,14 @@
                   = t('layout_sign_up_label')
               %li  
                 %a{:href => '../users/sign_in'}
-                  = t('layout_login_label')
+                  = t('layout_sign_in_label')
             - else
               %li
                 %a{:href => "../users/"} 
                   = t('layout_my_profile_label')
               %li
-                %a{:href => "#{destroy_user_session_path}", :method => 'DELETE'} 
-                  = t('layout_my_profile_label')
+                %a{:href => "#{destroy_user_session_path}", :method => "delete"}
+                  =t('layout_sign_out_label') 
           
     #content
     %p{:class => "notice"}
