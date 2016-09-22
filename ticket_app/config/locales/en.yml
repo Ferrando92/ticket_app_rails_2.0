@@ -35,5 +35,10 @@ en:
     show_Mail_label: 'Email'
     show_Session_label: 'Session'
     show_Price_label: 'Price'
+  #/user/show/id (partial)
+    show_user_name_label:   'Full name: '
+    show_user_id_label:     'ID: #'
+    show_user_mail_label:   'Email: '
+    show_user_wallet_label: 'Credit: '
 
 

@@ -34,7 +34,7 @@
                   = t('layout_sign_in_label')
             - else
               %li
-                %a{:href => "../users/"} 
+                %a{:href => "../user/#{current_user.id}"} 
                   = t('layout_my_profile_label')
               %li
                 %a{:href => "#{destroy_user_session_path}", :method => "delete"}
@@ -49,7 +49,7 @@
     %div{:class => "container center-block" }
       =yield
 
-  #footer
+    #footer
     %footer{:class => 'footer'}
       %div{:class => 'container'}
         %p{:class => 'text-muted'}

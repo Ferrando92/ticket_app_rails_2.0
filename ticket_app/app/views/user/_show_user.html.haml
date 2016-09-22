@@ -1,0 +1,12 @@
+%h1
+  =user.name
+%p 
+  =t('show_user_id_label')
+  =user.id
+%p
+  =t('show_user_mail_label')
+  =user.email
+%p
+  =t('show_user_wallet_label')
+  =user.wallet? ? user.wallet : "0.0€"
+
