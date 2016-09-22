@@ -8,4 +8,8 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :email, :password) }
       devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name, :email, :password, :current_password) }
   end
+
+  def authenticate_admin
+      redirect_to root_path, :flash => { :error => 'NOT AN ADMIN, NOT COOL'} unless user_signed_in? && current_user.is_admin? 
+  end
 end

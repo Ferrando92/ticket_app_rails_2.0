@@ -41,10 +41,9 @@
                   =t('layout_sign_out_label') 
           
     #content
-    %p{:class => "notice"}
-      =notice
-    %p{:class => "alert"}
-      =alert 
+    -flash.each do |key,value|
+      %div{:class => "#{flash_class(key)}"}
+        =value
 
     %div{:class => "container center-block" }
       =yield
